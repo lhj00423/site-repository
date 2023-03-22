@@ -1,0 +1,271 @@
+
+<2월 28일>
+Python Extension Pack -확장자 다운
+Python 
+
+https://www.python.org/downloads/windows/ - 32.11 다운로드
+
+변수+문자
+let str = "green"
+console.log("재미잇음"+green)
+console.log(`재미잇음 ${str}`)
+
+문자열 포멧팅 : 문자열 안에 어떤 값을 삽입
+포맷코드 %s 문자열 %d 정수 %f 소수
+number = 18
+print("현재온도는 %입니다." %number)
+print("%0.4f"%3.123456789)
+num = 3 
+print("나는 사과%d를 먹었다" % num)
+
+format 함수사용하기
+"나는 사과 {0}개를 먹었다" .format("여러개")
+
+파이썬 3.6버전 부터 사용가능
+f문자열 포매팅
+name = "green"
+age =30
+print (f'나의 이름은 {name}이고 나이는 {age}이다')
+
+< 문자열 관련 함수 >
+1.문자개수세기 --> 문자열에서 해당문자가 몇개인지 반환
+문자열. count('문자')
+ex> str ="hobby" 
+str.count('b') ->b가 몇개 있는지
+
+2.위치알려주기 find()--> 문자가 처음 나온 위치를 반환
+문자열.find('문자')
+ex>str = "javascript"
+str.find('a')
+
+3.문자열 삽입 join()--> 문자열 사이에 문자열을 삽입
+"추가할 문자".join("문자열")
+ex> "*".join('abcd') --> 'a*b*c*d'
+리스트를 --> 문자열로
+"*".join(['a','b','c','d']) --> 'a*b*c*d'
+
+4.대문자로 변환 upper()
+문자열.upper()
+5.소문자로 변환 lower()
+문자열.lower()
+6.왼쪽 공백 제거 lstrip()
+문자열.lstrip()
+7.왼쪽 공백 제거 rstrip()
+문자열.rstrip()
+8.양쪽 공백 제거 strip()
+문자열.strip()
+9.문자열 바꾸기 replace()
+문자열.replace("a","b")
+10.문자열 --> 리스트 split()
+str = "Life is too short"
+str.split() ---> ["Life","is","too","short"]
+str2 = "a:b:c:d"
+str2.split(".") -->["a","b","c","d"]
+
+
+
+
+
+
+
+
+
+< 3월 2일 >
+
+
+ < 파이썬 자료형 >
+숫자형 : 숫자형태로 이루어진 자료형
+정수, 실수, 8진수, 16진수
+문자열 자료형 : 문자들의 집합 "", ",""" """ , "" ""
+리스트 자료형: nums = [1,2,3,4,5]
+리스트명 = [요소1,요소2,요소3] 리스트명[0]
+리스트 관련 함수
+1.append() 리스트의 마지막 요소를 추가
+구문> 리스트.append(추가할요소)
+2.sort() 리스트의 요소를 순서대로 정렬
+구문> 리스트.sort()
+3.reverse() 리스트 뒤집기
+구문> 리스트.reverse()
+4.index() 리스트에 해당 값이 있으면 그 값의 인덱스 값을 리턴
+없으면 오류발생
+구문> 리스트.index(value)
+5.insert(start,value) 리스트에 요소 삽입, start 번째 위치에 value를 삽입
+구문> 리스트.insert(2,30)
+6.remove(value) 리스트에서 첫번째로 나오는 value 삭제
+list = [1,2,3,4,5,6] list.remove(2) ---> [1,2,3,4]
+7.pop() 리스트의 맨 마지막요소를 리턴하고 그 요소는 삭제
+구문> 리스트.pop()
+8.count(value) 리스트 안에 value가 몇개 있는지 개수를 리턴
+list = [1,2,3,3,3,6]  -->3이 몇개인지 3개
+구문> 리스트.count(3)
+
+
+< 튜플 자료형() >
+* 요소값 변경할 수 없음 
+t1 = ()
+t2 = (1,)
+t3 = (1,2,3)
+t4 = 1,2,3 ->괄호생략가능
+딕셔녀리 자료형 key:value
+d1={'name':'green','age':30}
+d1={'name':'green','age':30', 'name':'blue'}
+d1['name']
+
+
+< 딕셔너리 관련함수 >
+1.key리스트 만들기 keys()
+구문> 딕셔너리.keys()           
+-> 파이썬 2.7버전까지 key만 리스트로 돌려줌
+그 이후로는 dict_keys객체로 돌려줌
+list()
+2.value리스트 만들기 values()
+구문> 딕셔너리.values()      
+ ->파이썬 2.7버전까지 values만 리스트로 돌려줌
+그 이후로는 dict_values객체로 돌려줌
+3.key,value쌍으로 구하기 items()
+key와 value의 쌍을 튜플로 묶은 값을 dict_items객체로 돌려줌
+4.key:value 쌍 모두지우기 clear()
+구문> 딕셔너리.clear()
+5.key로 value값 구하기 get()
+구문> 딕셔너리.get(key)
+딕셔너리[key]
+차이> 존재하지 않는 key로 접근시 딕셔너리[key] key오류가 발생
+딕셔너리.get(key) None을 돌려줌
+6.해당 key가 딕셔너리 안에 있는지 조사 in
+구문> 'key' in 딕셔너리 있으면 true, 없으면 false리턴
+
+
+집합 자료형 파이썬 2.3부터 지원시작
+집합에 관련된 것을 쉽게 처리하기 위해 만든 처리형
+*중복을 허용하지 않음 , 순서가 없음
+s1 =set([1,2,3])
+s2=set("Hello")
+s = set()
+불 자료형 - 참과 거짓을 나타내는 자료형 True 참, false 거짓
+
+< 집합 자료형 관련 함수 >
+1.값 하나 추가하기 add
+구문> 집합.add(value)
+2.값 여러개 추가하기 update
+구문> 집합.update([4,5,6])
+3.특정 값 제거하기 remove()
+구문> 집합.remove(value)
+4.교집합  집합1 & 집합2, 집합1.intersection(집합2)
+s1 = set([1,2,3,4,5,6])
+s2 = set([4,5,6,7,8,9])
+s1 & s2 {4,5,6} 
+s1.intersection(s2) {4,5,6}
+5.합집합 집합1 | 집합2, 집합1.union(집합2) 
+집합을 합쳐서 리턴해줌(중복해서 포함되는 값은 하나씩만 들어감)
+s1 = set([1,2,3,4,5,6])
+s2 = set([4,5,6,7,8,9])
+s1 | s2 {1,2,3,4,5,6,7,8,9}
+s1.union(s2)
+6.차집합 집합1 - 집합2 , 집합1.difference(집합2)
+s1 = set([1,2,3,4,5,6])
+s2 = set([4,5,6,7,8,9])
+s1 - s2 {1,2,3}
+s1.difference(s2) {1,2,3}
+
+
+ < 제어문 >
+1.조건문
+1)if문 else if문 else문
+if 조건문:
+	수행할문장
+* 비교연산자
+x < y x가 y보다 작다
+x > y x가 y보다 크다
+x === y x와 y가 같다
+x != y x와 y가 같지않다
+x >= y x가 y보다 크거나 같다
+* 논리연산자 
+and연산자 1<10 or 5>6 둘중 모두 참일때 참
+or연선자 1<10 or 5>10 둘중 하나만 참이어도 참
+not연산자 not x	x가 거짓이면 참, x가 참이면 거짓
+
+
+<3월 3일>
+조건문
+if
+elif
+else
+조건부표현식
+scroe = 60
+if scroe > 70:
+	message = "a"
+else :
+	message = "b"
+조건부표현식
+message = "a" if score > 70 else "b"
+
+2.반복문
+< while >
+구문
+while 조건:
+	실행문
+break : 반복을 탈출
+continue : 반복 건너뛰기
+
+< for문 >
+for 변수 in 리스트(또는 튜플, 문자열):
+	수행할 문장....
+
+test_list = ["one","two","three"]
+for in test_list 
+	print(i)
+
+< range()함수 >
+range(stop) 0~stop-1까지 숫자를 생성
+range(start,stop) start ~ stop-1까지 숫자를 생성
+range(start,stop,step) start~stop-1 숫자를 step간격으로 생성
+
+ > for i in range(1,11):
+
+01 평균구하기 
+[70,60,55,75,95,90,80,80,85,100]
+for문을 사용하여 A학급의 평균 점수를 구해 보자.
+len(리스트) --> 리스트길이
+
+02. * 출력
+*
+**
+***
+****
+
+03. 가위바위보 게임 만들기
+가위, 바위, 보 중 하나를 입력받고 컴퓨너를 랜덤으로 가위, 바위, 보 중 하나를 지정하고
+누가 이겼는지 출력하시오
+
+
+
+함수
+def 함수명(매개변수):
+	수행할 문장
+매개변수:함수에 입력으로 전달받는 값을 받는 변수
+인수:함수를 호출할때 전달하는 입력 값
+def add(a,b) :
+	retrun:a+b
+re = add(1,2)   --> 3
+
+
+포폴 할거
+양쪽 픽스드 연결하기
+깃허브에 프로젝트 코드 올리기 - 연결하기
+스킬 다시 적기
+헤더 링크달기
+다크모드 라이트모드
+프로젝트 버튼에 주소 연결하기
+이메일, 버튼 칸 뭐로 연결하지 정하기
+
+< see more 에 넘어갈 컴포넌트 만들기 >
+- 화장품, 호텔, todolist, 호텔(파랭이)
+
+contact 멘트에 css넣기
+
+
+
+
+
+
+
